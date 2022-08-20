@@ -7,11 +7,18 @@ function agregar() {
     valores.push(campo.value);
     campo.value = '';
   }
+
 }
 
+
+
 function mostrar() {
-  const ul = document.getElementById('lista');
-  const li = document.createElement('li');
-  li.appendChild(document.createTextNode(nombre));
-  ul.appendChild(li);
+  valores.forEach(nombre => {
+    const ul = document.getElementById('lista');
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(nombre));
+    ul.appendChild(li);
+  }
+  )
+  valores=[];
 }
